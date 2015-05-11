@@ -9,11 +9,12 @@ using LitJson;
 namespace TSMECS
 {
    public  class PID 
-    {
+   {
         public int pid{get;set;}
-    }
-    public class Conf
-{
+   }
+   
+   public class Conf
+   {
         private Dictionary<string, object> config_map;
 
         public Conf() 
@@ -34,40 +35,40 @@ namespace TSMECS
                 return false;
             }
         }
-}
+    }
 
-public class TaskComponent
-{
-    private Dictionary<string,string> component_list;
-    public TaskComponent() 
+    public class TaskComponent
     {
-        component_list = new Dictionary<string, string>();
-    }
-    public bool addItem(string key, string value) 
-    {
-        try
+        private Dictionary<string,string> component_list;
+        public TaskComponent() 
         {
-            component_list.Add(key, value);
-            return true;
+            component_list = new Dictionary<string, string>();
         }
-        catch (Exception e)
+        public bool addItem(string key, string value) 
         {
-           // Console.WriteLine("Error in TaskComponent Add item into map: " + e.Message);
-            return false;
+            try
+            {
+                component_list.Add(key, value);
+                return true;
+            }
+            catch (Exception e)
+            {
+               // Console.WriteLine("Error in TaskComponent Add item into map: " + e.Message);
+                return false;
+            }
         }
     }
-}
 
-public class Context
-{
-    public TaskComponent  component { get; set; }
-    public int taskid { get; set; }
-    public Context() 
+    public class Context
     {
-        component = new TaskComponent();
-        taskid = -1;
+        public TaskComponent  component { get; set; }
+        public int taskid { get; set; }
+        public Context() 
+        {
+            component = new TaskComponent();
+            taskid = -1;
+        }
     }
-}
 
 public class InitialHandshake
 {
@@ -86,27 +87,10 @@ public class InitialHandshake
     {
         try
         {
-            //LocalLog.writeLog(s);
-            //Console.WriteLine(s);
             s = formatAdjust(s);
-            //Console.WriteLine("Format String Sucess");
             JsonData jd = JsonMapper.ToObject(s);
             InitialHandshake handshake = new InitialHandshake();
-            //Console.WriteLine("Initial Handshake Success");
-            // test 测试keys的读取
-            //Console.WriteLine("Test for keys");
-            //foreach (string str_item in jd.getKeys())
-            //{
-            //    Console.WriteLine(str_item);
-            //}
-            /////////////////////////////////////////////////////
-            if (jd["pidDir"].IsString)
-                handshake.pidDir = (string)jd["pidDir"];
-            else
-            {
-               // Console.WriteLine("PidDir load fail");
-            }
-            //////////////////////////////////////////////////////
+            if (jd["pidDir"].IsString) handshake.pidDir = (string)jd["pidDir"];
             JsonData temp_config_json = jd["conf"];
             foreach (string str_item in temp_config_json.getKeys())
             {
@@ -117,7 +101,6 @@ public class InitialHandshake
                     if (!value.ToString().Equals("empty"))
                     {
                         handshake.conf.addItem(key, value);
-                       // Console.WriteLine(key + "   " + value);
                     }
                 }
             }
@@ -130,10 +113,7 @@ public class InitialHandshake
                 if (temp_task_id.IsInt || temp_task_id.IsLong)
                     handshake.context.taskid = (int)jd["context"]["taskid"];
             }
-            else
-            {
-                //Console.WriteLine("no task id");
-            }
+            
             if (temp_context_json.hasKey("task->component"))
             {
                // Console.WriteLine("has task component");
@@ -159,8 +139,6 @@ public class InitialHandshake
         }
         catch (Exception e) 
         {
-            LocalLog.writeLog(e.Message);
-           // Console.WriteLine(e.Message);
             return new InitialHandshake();
         }
     }

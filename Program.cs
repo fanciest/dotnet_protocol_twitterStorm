@@ -8,7 +8,6 @@ namespace TSMECS
     {
         static void Main(string[] args)
         {
-            //LocalLog.writeLog("hello world");
             SpiltSentenceBolt bolt = new SpiltSentenceBolt();
             bolt.run();
         }

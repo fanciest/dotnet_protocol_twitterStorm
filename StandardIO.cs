@@ -27,7 +27,6 @@ namespace TSMECS
             while (true) 
             {
                 string context = Console.ReadLine();
-                LocalLog.writeLog(context);
                 if (context.Equals(END_FLAG))
                     break;
                 msg = msg + context + "\n";

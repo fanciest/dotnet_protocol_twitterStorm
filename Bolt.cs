@@ -8,29 +8,21 @@ using System.Diagnostics;
 
 namespace TSMECS
 {
-   
-
    public class Bolt
     {
         protected Queue<Tuple> tuple_queue = new Queue<Tuple>();
-
         public void initialComponent(Conf config, Context context) 
         {
-            //LocalLog.writeLog("IntialComponent");
             string information = StandardIO.readMsg();
-            //string information = Console.ReadLine();
-            //LocalLog.writeLog(information);
             InitialHandshake handshake = InitialHandshake.Parse(information);
             config = handshake.conf;
             context = handshake.context;
             int process_id = Process.GetCurrentProcess().Id;
             PID temp = new PID();
             temp.pid = process_id;
-
             string json_pid = JsonMapper.ToJson(temp);
             try
             {
-                //Console.WriteLine(handshake.pidDir+"  "+process_id);
                 string dir_path = @handshake.pidDir;
                 System.IO.Directory.CreateDirectory(dir_path);
                 string file = handshake.pidDir + @"\" + process_id.ToString();
@@ -45,6 +37,7 @@ namespace TSMECS
             }
             StandardIO.sendMsg(json_pid);
         }
+        
         public void initialize(Conf stormconfig, Context context) 
         {
             // do nothing
@@ -59,7 +52,6 @@ namespace TSMECS
 
         public void run() 
         {
-            LocalLog.writeLog("Bolt run");
             Conf config = new Conf();
             Context context = new Context();
             initialComponent(config, context);

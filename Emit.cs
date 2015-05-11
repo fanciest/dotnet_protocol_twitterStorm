@@ -67,11 +67,9 @@ namespace TSMECS
             stream = _stream;
             task = _task;
             tuple = _tuple;
-        }
-        
+        }   
     }
-
-   
+    
     //"command": "emit",
     //// The id for the tuple. Leave this out for an unreliable emit. The id can
     //// be a string or a number.
