@@ -10,7 +10,7 @@ namespace TSMECS
 {
    public class Bolt
     {
-        protected Queue<Tuple> tuple_queue = new Queue<Tuple>();
+        //protected Queue<Tuple> tuple_queue = new Queue<Tuple>();
         public void initialComponent(Conf config, Context context) 
         {
             string information = StandardIO.readMsg();
