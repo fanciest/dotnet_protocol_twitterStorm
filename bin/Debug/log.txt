@@ -1,0 +1,52 @@
+hello world
+IntialComponent
+{"pid":"畅/App"}
+{"pid":"畅/App"}
+hello world
+IntialComponent
+{"pid":"畅/app"}
+{"pid":"畅/app"}
+给定关键字不在字典中。
+hello world
+IntialComponent
+{"pid":"c:/Appdata"}
+{"pid":"c:/Appdata"}
+给定关键字不在字典中。
+hello world
+IntialComponent
+{"pid":"c:\Appdata"}
+{"pid":"c:\Appdata"}
+hello world
+IntialComponent
+hello world
+IntialComponent
+{"pid":"c:\Appdata"}
+{"pid":"c:\Appdata"}
+Invalid character 'A' in input string
+hello world
+IntialComponent
+{"pid":"c:\\Appdata"}
+{"pid":"c:\\Appdata"}
+给定关键字不在字典中。
+
+hello world
+IntialComponent
+{"pid":"c:\add"}
+{"pid":"c:\add"}
+Invalid character 'a' in input string
+hello world
+IntialComponent
+{"pid":"c:\appdata"}
+{"pid":"c:\appdata"}
+给定关键字不在字典中。
+s
+hello world
+IntialComponent
+{"pid":"c:\\Users\app"}
+{"pid":"c:\\Users\app"}
+Invalid character 'U' in input string
+hello world
+IntialComponent
+{"pid":"c:\\Users\appdata"}
+{"pid":"c:\\Users\appdata"}
+给定关键字不在字典中。

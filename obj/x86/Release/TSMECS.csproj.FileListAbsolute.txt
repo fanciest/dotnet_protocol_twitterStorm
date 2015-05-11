@@ -1,0 +1,10 @@
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\bin\Release\TSMECS.exe.config
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\bin\Release\TSMECS.exe.manifest
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\bin\Release\TSMECS.application
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\bin\Release\TSMECS.exe
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\bin\Release\TSMECS.pdb
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\obj\x86\Release\TSMECS.TrustInfo.xml
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\obj\x86\Release\TSMECS.exe.manifest
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\obj\x86\Release\TSMECS.application
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\obj\x86\Release\TSMECS.exe
+C:\Users\畅\documents\visual studio 2010\Projects\TwitterStormMultiLanguageExtensionCSHARP\TSMECS\obj\x86\Release\TSMECS.pdb
